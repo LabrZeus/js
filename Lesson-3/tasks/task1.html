@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/styleTask1.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styleTask1.css" />
+  </head>
+  <body>
     <h1>Задача 1</h1>
 
     <p>
-        З клавіатури вводяться імена двох дітей та кількість у них цукерок. Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або вивести, що кількість однакова.
+      З клавіатури вводяться імена двох дітей та кількість у них цукерок.
+      Вивести не екран ім’я тієї дитини, у якої кількість цукерок є більшою, або
+      вивести, що кількість однакова.
     </p>
 
-        <button onclick="window.history.back()">Назад</button>
+    <button onclick="window.history.back()">Назад</button>
 
-        <script>
-            // 1. Вводимо необхідні дані
-            let firstNameChildren = prompt("Введіть ім'я першої дитини");
-            let candyFirstChildren = parseInt(prompt("Кількість цукерок у першої дитини"));
-            let secondNameChildren = prompt("Введіть ім'я другої дитини");
-            let candySecondChildren = parseInt(prompt("Кількість цукерок у другої дитини"));
+    <script>
+      // 1. Вводимо необхідні дані
+      const firstNameChildren = prompt("Введіть ім'я першої дитини");
+      const candyFirstChildren = parseInt(
+        prompt("Кількість цукерок у першої дитини")
+      );
+      const secondNameChildren = prompt("Введіть ім'я другої дитини");
+      const candySecondChildren = parseInt(
+        prompt("Кількість цукерок у другої дитини")
+      );
 
-            //2. Знаходимо та виводимо результат
-            if(candyFirstChildren > candySecondChildren){
-                alert(`У ${firstNameChildren} більше цукерок`)
-            } else if (candyFirstChildren < candySecondChildren) {
-                alert(`У ${secondNameChildren} більше цукерок`)
-            } else if ( candyFirstChildren === candySecondChildren) { 
-                alert(`У ${firstNameChildren} та ${secondNameChildren} однакова кількість цукерок`)
-            }
-
-        </script>
-
-</body>
+      //2. Знаходимо та виводимо результат
+      if (candyFirstChildren > candySecondChildren)
+        alert(`У ${firstNameChildren} більше цукерок`);
+      else if (candyFirstChildren < candySecondChildren)
+        alert(`У ${secondNameChildren} більше цукерок`);
+      else if (candyFirstChildren === candySecondChildren)
+        alert(
+          `У ${firstNameChildren} та ${secondNameChildren} однакова кількість цукерок`
+        );
+    </script>
+  </body>
 </html>

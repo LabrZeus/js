@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 16</h1>
+
+    <p>
+      Користувач поступово вводить прибуток магазину за кожен день протягом N тижнів. Знайти загальну величину прибутку та вивести величину прибутку протягом кожного окремого тижня.
+    </p>
+
+    <script>
+      //1. Вводимо необхідні дані
+      const userInputDay = parseInt(prompt('За скільки днів ви бажаете порахувати прибуток?'))
+      let countWeek = 0
+      let countDay = 1
+      let count = 0
+
+      let allProfit = 0
+      let weekProfit = 0
+      let dayProfit = 0
+
+
+      //2. Обчислюємо результат
+      for (countDay; countDay <= userInputDay; countDay++) {
+        dayProfit = parseFloat(prompt(`Який склав прибуток за ${countDay} день з ${userInputDay} днів?`))
+          allProfit += dayProfit
+          weekProfit += dayProfit
+          count++
+
+        if(count === 7){
+          count = 0
+          countWeek++
+          document.write(`<br>Прибуток ${countWeek} тижня дорівнює ${weekProfit} грн`)
+          weekProfit = 0
+        }
+      }
+
+      //3. Виводимо результат
+      document.write(`<br><br>Зальний прибуток за ${userInputDay} днів складає, ${allProfit} грн`)
+
+    </script>
+    <br>
+    <button onclick="window.history.back()">Назад</button>
+  </body>
+</html>

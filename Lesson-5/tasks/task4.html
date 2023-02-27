@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 4</h1>
+
+    <p>
+      Вивести таблицю з 3 рядків і 7 стовпців.
+    </p>
+
+    <script>
+      // 1. Вводимо необхідні дані
+
+
+      //2. Знаходимо та виводимо результат
+      document.write(`<table border="2px"><tr>`)
+        for (let j = 0; j < 3; j++) {
+          for (let i = 1; i <= 7; i++) {
+            document.write(`<td>${i}</td>`)
+          }
+          document.write(`<tr>`)
+        }
+      document.write(`</tr></table>`)
+
+    </script>
+    <br>
+        <button onclick="window.history.back()">Назад</button>
+  </body>
+</html>

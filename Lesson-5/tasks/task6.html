@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+
+    <p>Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за зразком</p>
+
+    <div style="display: flex;">
+    <script>
+      // 1. Вводимо необхідні дані
+      let count = 1
+
+      //2. Знаходимо та виводимо результат
+      document.write(`<table border="2px">`)
+        for (let j = 0; j < 9; j++) {
+          document.write(`<tr>`)
+          for (let i = 1; i <= 3; i++) {
+            document.write(`<td>${count}</td>`)
+            count++
+            if (count % 9 == 1) {
+              document.write(`<table border="2px" style="margin: 10px;">`)
+            }
+          }
+        }
+      // document.write(`</tr></table>`)
+
+    </script>
+    </div>
+  </body>
+</html>

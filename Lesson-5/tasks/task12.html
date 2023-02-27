@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Задача 12</h1>
+
+    <p>
+      Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).
+    </p>
+
+    <div style="display: flex; width: 100px; height: 100px; object-fit: cover;">
+    <script>
+      //1. Вводимо необхідні дані
+      const minRandomNumber = 1
+      const maxRandomNumber = 4
+
+      let counterCherry = 0
+      let counterLemon = 0
+      let counterPineapple = 0
+      let counterStrawberry = 0
+
+
+      //2. Знаходимо та виводимо результат
+      for (let step = 0; step < 3; step++) {
+        let randomNameImage = minRandomNumber + Math.floor(Math.random()*(maxRandomNumber - minRandomNumber + 1));
+        document.write(`<img src="img/0${randomNameImage}.png">`)
+
+        if(randomNameImage == 1)
+        counterCherry++
+        else if (randomNameImage == 2)
+        counterLemon++
+        else if (randomNameImage == 3)
+        counterPineapple++
+        else if (randomNameImage == 4)
+        counterStrawberry++
+      }
+
+      switch (true) {
+          case counterCherry == 3:
+          document.write('Ваш виграш становить 100грн')
+          break
+          case counterLemon == 3:
+          document.write('Ваш виграш становить 200грн')
+          break
+          case counterPineapple == 3:
+          document.write('Ваш виграш становить 500грн')
+          break
+          case counterStrawberry == 3:
+          document.write('Ваш виграш становить 1000грн')
+          break
+        }
+
+    </script>
+    </div>
+    <br>
+    <button onClick="window.location.reload();">Спробувати ще раз</button>
+    <br>
+    <br>
+    <button onclick="window.history.back()">Назад</button>
+  </body>
+</html>
